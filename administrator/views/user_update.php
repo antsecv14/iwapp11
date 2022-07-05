@@ -11,7 +11,7 @@
             extract($_GET);
             include("../controller/user_controller.php");
             $userControl = new user_controller();
-            $id = $_GET['idUser'];
+            $id = $_GET['id'];
             $listaUser=$userControl->GetUser($id);
             $listaRol[1]="Administrador";
             $listaRol[2]="Colaborador";
@@ -53,4 +53,3 @@
 </div>
 
 
-<?php require_once "./footer.php"; ?>

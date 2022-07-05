@@ -7,7 +7,7 @@
 
 <div class= "content-adduser">
 <h1>Nuevo Usuarios</h1>
-<div class="menuDashboard"><a href="user_add.php">+ Add User</a></div>
+
 <form method="post" action="../controller/add_user.php">
 			<div class="grupoInput">
 				<label for="nombres">Nombres</label>
@@ -45,4 +45,3 @@
 </div>
 
 
-<?php require_once "./footer.php"; ?>

@@ -11,19 +11,19 @@
             <div class="sucursales">
                 <div class="title">
                 
-                    <h2>Gestion de usuarios</h2>
+                    <h2>Gestion de platos</h2>
                     
                     <ul class = "lista-btn">
                         <li>
-                            <div class="btn btn-2"><a href="user_add.php">Agregar</a></div>
+                            <div class="btn btn-2"><a href="plato_add.php">Agregar</a></div>
                         </li>
                     </ul>
                 </div>
                 <?php
 
-include("../controller/user_controller.php");
-$control= new user_controller();
-$control->ListUser();
+include("../controller/plato_controller.php");
+$control= new plato_controller();
+$control->ListPlato();
 ?>
 
                 

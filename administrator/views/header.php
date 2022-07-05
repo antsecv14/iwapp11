@@ -20,7 +20,7 @@ include("../seguridad/seguridad.php");
         <ul>
             <li><img src="../images/inicio.png" alt="">&nbsp; <a href="dashboard.php"><span>Inicio</span></a> </li>
             <li><img src="../images/grupo.png" alt="">&nbsp;<a href="user.php"> <span>Colaboradores</span></a> </li>
-            <li><img src="../images/plato.png" alt="">&nbsp;<span>Platos</span> </li>
+            <li><img src="../images/plato.png" alt="">&nbsp;<a href="platos.php"> <span>Platos</span></a></li>
             <li><img src="../images/information.png" alt="">&nbsp; <span>Help</span></li>
             <li><img src="../images/setting.png" alt="">&nbsp;<span>Settings</span> </li>
         </ul>
@@ -32,7 +32,7 @@ include("../seguridad/seguridad.php");
                     <input type="text" placeholder="Search..">
                     <button type="submit"><img src="../images/search.png" alt=""></button>
                 </div>
-                <div class="user">
+                <div class="user" onclick="menuToggle();">
                     <a href="#" class="btn">Add New</a>
                     <img src="../images/notifications.png" alt="">
                     <div class="img-case">
@@ -52,6 +52,12 @@ include("../seguridad/seguridad.php");
 
                     </div>
             </div>
+            <script>
+                function menuToggle(){
+                    const toggleMenu = document.querySelector('.user_menu');
+                    toggleMenu.classList.toggle('active')
+                }
+            </script>
         </div>
         
     </div>
