@@ -1,0 +1,13 @@
+Options +FollowSymLinks
+
+RewriteEngine On
+
+ErrorDocument 400 http://localhost/IWAPP11/htfiles/404.php
+ErrorDocument 401 http://localhost/IWAPP11/htfiles/404.php
+ErrorDocument 402 http://localhost/IWAPP11/htfiles/404.php
+ErrorDocument 403 http://localhost/IWAPP11/htfiles/404.php
+ErrorDocument 404 http://localhost/IWAPP11/htfiles/404.php
+ErrorDocument 500 http://localhost/IWAPP11/htfiles/404.php
+
+#RewriteRule ^index.html$ index.html
+#RewriteRule ^index.html/(\w+)/?$ index.html?action=$1
