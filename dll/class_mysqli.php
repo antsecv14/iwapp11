@@ -83,13 +83,17 @@ class clase_mysqli{
 			
 				
 				echo"<div class='box-container'>";
-				echo"<form action='' method='post'>";
+				echo"<form action='../pedidos/controller/add_pedido.php' method='post'>";
 				echo"<div class='box'>";
 				echo"<div class='plato_img'>";
 				echo"<img src='../uploaded_img/".$fetch_product['image']."' alt=''>";
 				echo"</div>";
 				echo"<h3>".$fetch_product['nombre']. "</h3>";
 				echo "<div class='price'>".$fetch_product['precio']."/-</div>";
+				echo "<input type='hidden' name='nombre' value='".$fetch_product['nombre']."'>";
+                echo "<input type='hidden' name='precio' value='".$fetch_product['precio']."'>";
+                echo "<input type='hidden' name='image' value='".$fetch_product['image']."'>";
+                echo "<button type='submit' class='btn-submit' value='pedir' name='add_to_cart'>";
 				echo"</div>";
 				echo"</form>";
 				echo "</div>";
@@ -144,6 +148,35 @@ class clase_mysqli{
 					echo "<td>".$row[$i]."</td>";
 				}
 				//echo "<td>".utf8_encode($row[$i])."</td>";
+				
+			}
+			echo  "<td><a href='$rutaDelete?id=$row[0]'>Borrar</a></td>";
+			echo  "<td><a href='$rutaUpdate?id=$row[0]'>Actualizar</a></td>";
+			echo "</tr>";
+		}
+		echo "</table>";
+	}
+
+	function verconsultacrudpedidos($rutaUpdate, $rutaDelete){
+		echo "<table class='tablecud'>";
+		echo "<tr>";
+		for ($i=0; $i < $this->numcampos() ; $i++) { 
+			//echo "<td>".$this->nombrecampo($i)."</td>";
+			
+			echo  "<td>".mysqli_fetch_field_direct($this->Consulta_ID, $i)->name."</td>";
+		}
+		echo  "<td>Borrar</td>";
+		echo  "<td>Actualizar</td>";
+		echo "</tr>";
+		while ($row=mysqli_fetch_array($this->Consulta_ID)) {
+			echo "<tr>";
+			for ($i=0; $i < $this->numcampos(); $i++) { 
+				if($i==4){
+					echo "<td><img src='../../uploaded_img/".$row[$i]."' height=50 alt=''></img></td>";
+				}else{
+					echo "<td>".$row[$i]."</td>";
+				}
+				
 				
 			}
 			echo  "<td><a href='$rutaDelete?id=$row[0]'>Borrar</a></td>";

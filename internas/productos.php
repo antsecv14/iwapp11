@@ -6,7 +6,9 @@ include("header.php");
 <div class="boxCentrado">
     <h2 class = "h2Home">
         Productos
-    </h2>
+</h2>
+
+
     <?php
 			include("../dll/config.php");
 			include("../dll/class_mysqli.php");

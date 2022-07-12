@@ -273,6 +273,13 @@ body{
    color:var(--black);
 }
 
+.products .box-container .box form .btn-cart{
+	height: 5em;
+	color: #fff;
+	background-color: #DB6900;
+	padding: 30%;
+}
+
 
 .tablecud {
 	width: 100%;
@@ -301,6 +308,7 @@ tr:hover{
 	text-align: center;
 	border: 1px solid #BBBBBB;
 }
+
 
 form .btn-submit {
 	padding: 0 20px;
