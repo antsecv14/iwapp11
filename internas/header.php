@@ -3,6 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Mi primera app</title>
 	<link rel="stylesheet" type="text/css" href="../css/estilos.css">
@@ -53,11 +54,11 @@
 		</container> 
 			
 		<nav class="menuPrincipal">
-			<a href="">Inicio</a>
-			<a href="internas/productos.php">Productos</a>
-			<a href="internas/contactos.php">Registro</a>
-			<a href="internas/listados.php">Listado</a>
-			<a href="internas/login.php">Login</a>
+			<a href="../index.html">Inicio</a>
+			<a href="productos.php">Productos</a>
+			<a href="contactos.php">Registro</a>
+			<a href="listados.php">Listado</a>
+			<a href="login.php">Login</a>
 		</nav>
     </div>
 

@@ -1,22 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Mi primera app</title>
-	<link rel="stylesheet" type="text/css" href="../css/estilos.css">
-</head>
-<body>
-	<header class="cabeceraPrincipal">
-		<h1>Vilonaco Food</h1>
-	</header>
-	<nav class="menuPrincipal">
-		<a href="../">Inicio</a>
-		<a href="">Empresa</a>
-		<a href="contactos.php">Registro</a>
-		<a href="listados.php">Listado</a>
-		<a href="login.php">Login</a>
-	</nav>
+<?php
+include("header.php");
+?>
 	
 	<main>
 		<div class="boxCentrado">
