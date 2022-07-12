@@ -25,16 +25,18 @@ body{
 
 .cabeceraPrincipal{
 	display: flex;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
 	background-color: #ffffff;
 }
 .cabeceraPrincipal img{
 	height: auto;
 	width: 400px;
-	left: 334px;
-	top: 68px;
-	padding-top: 15%;
 	
-	padding-left: 35%;
+	padding-top: 10%;
+
+	
 }
 
 
@@ -42,10 +44,11 @@ body{
 	background-color: #fff;
 	text-align: center;
 	padding: 15px 25px;
+	align-items: center;
 }
 .menuPrincipal a{
 	text-decoration: none;
-	padding: 9px 60px;
+	padding: 35px;
 	color: #EC6602;
 	text-transform: uppercase;
 	font-weight: 100;
@@ -54,6 +57,9 @@ body{
 	font-weight: bold;
 	transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
+
+
+
 
 .variantes-redes{
 	display: inline;
@@ -64,7 +70,7 @@ body{
 	padding-top: 15px;
 	float:left;
 }
-.variantes li{
+.variantes li {
 	text-align: center;
 	padding-bottom: 15px;
 	height: 30px;
@@ -77,27 +83,30 @@ body{
 .variantes li h3{
 	color: white;
 }
+.variantes li img{
+	height: 40px;
+}
 
 .variantes li .etiqueta{
+	
 	position: absolute;
+	top: 65px;
+	padding: 15px;
 	background-color: #494848;
-	padding: 10px;
 	box-sizing:border-box;
 	border-radius: 4px;
 	visibility: hidden;
 	opacity: 0;
 	transition: 0.5s;
-	transform: translateX(0) translateY(-50px);
+	
 }
+
 
 .variantes li:hover .etiqueta{
 	visibility: visible;
 	opacity: 1;
-	transform: translateX(0) translateY(0);
+	
 }
-
-
-
 
 .redes{
 	padding:15px;
@@ -108,12 +117,13 @@ body{
 .redes li{
 	text-align: center;
 	height: 30px;
-	width: 100px;
-	line-height:40px;
+	width: 50px;
+	line-height:15px;
 	display: inline-block;
 }
 
 .redes li img{
+	height: 20px;
 	position: absolute;
 	-webkit-transition: opacity 0.5s ease-in-out;
 	-moz-transition: opacity 0.5s ease-in-out;
@@ -149,13 +159,16 @@ body{
 }
 
 .sliderPrincipal img{
+
 	width: 100%;
 }
 .h2Home{
-	text-align: center;
-	padding: 2em 0;
-	color: #DB6900;
+	text-align: Left;
+	padding: 1em 3em;
+	color: #404040;
 	font-size: 40px;
+	background-color: #fff;
+	font-family: arial,Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 .menu{
 	text-align: center;
@@ -173,6 +186,7 @@ body{
 }
 .menuPlato img{
 	width: 100%;
+	height: auto;
 }
 .menuPlato h3{
 	color: #DB6900;
@@ -191,9 +205,7 @@ body{
 	padding: 0.5em 1em;
 	margin-bottom: 5px;
 }
-main{
-	padding: 1em 2em;
-}
+
 
 .tablecud {
 	width: 100%;
@@ -260,7 +272,7 @@ form .btn-submit:hover {
 
 @media only screen and (max-width: 800px) {
   body {
-    background-color: blue;
+    background-color: white;
   }
 }
 
