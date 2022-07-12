@@ -14,7 +14,7 @@
             $id = $_GET['id'];
             $listaPlato=$platoControl->GetPlato($id);
         ?>
-<form method="post" action="../controller/update_plato.php">
+<form method="post" action="../controller/update_plato.php" enctype="multipart/form-data">
 
 <input type="hidden" name="idPlato" value="<?php echo $listaPlato[0]; ?>"><br>
 			<div class="grupoInput">
@@ -28,6 +28,10 @@
 			<div class="grupoInput">
 				<label for="precio">Precio</label>
 				<input type="number" min=0 step=".01" name="precio" id="precio" placeholder="Ingrese precio" value="<?php echo $listaPlato[3]; ?>">
+			</div>
+			<div>
+				<label for="Image">Imagen del producto</label>
+				<input type="file" name="image" accept="image/png, image/jpg, image/jpeg" class="box" id="image" required >
 			</div>
 			<div class="grupoInput">
 			 <button type="submit" value="Procesar" class="btn">Procesar</button>

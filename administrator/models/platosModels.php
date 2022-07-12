@@ -84,6 +84,12 @@ class PlatoModel
     $miconexion= new clase_mysqli();
     $miconexion->conectar(DBHOST, DBUSER, DBPASS, DBNAME);
     $resSQL=$miconexion->consulta("update `platos` SET `nombre` = '$this->nombre', `descripcion` = '$this->descripcion', `precio` = '$this->precio', `image` = '$this->image' WHERE `platos`.`id` = $idPlato;");
+    if($resSQL){
+      move_uploaded_file($this->image_tmp_name, $this->image_folder);
+      $message[] = 'product add succesfully';
+   }else{
+      $message[] = 'could not add the product';
+   }
     return $resSQL;
     
 }

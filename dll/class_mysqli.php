@@ -76,6 +76,31 @@ class clase_mysqli{
 		echo "</table>";
 	}
 
+	function platoCartas(){
+		if(mysqli_num_rows($this->Consulta_ID)>0){
+			echo"<section class = 'products'>";
+			while($fetch_product = mysqli_fetch_assoc($this->Consulta_ID)){
+			
+				
+				echo"<div class='box-container'>";
+				echo"<form action='' method='post'>";
+				echo"<div class='box'>";
+				echo"<div class='plato_img'>";
+				echo"<img src='../uploaded_img/".$fetch_product['image']."' alt=''>";
+				echo"</div>";
+				echo"<h3>".$fetch_product['nombre']. "</h3>";
+				echo "<div class='price'>".$fetch_product['precio']."/-</div>";
+				echo"</div>";
+				echo"</form>";
+				echo "</div>";
+				
+
+			}
+			echo "</section>";
+		}
+		
+	}
+
 	function verconsultacrud($rutaUpdate, $rutaDelete){
 		echo "<table class='tablecud'>";
 		echo "<tr>";
