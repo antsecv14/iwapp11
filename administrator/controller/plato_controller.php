@@ -21,6 +21,10 @@ class plato_controller{
 	        $plato->setNombre($_POST['nombre']);
 	        $plato->setDescripcion($_POST['descripcion']);
 	        $plato->setPrecio($_POST['precio']);
+            $img = ($_FILES['image']['name']);
+            $plato->setImage($_FILES['image']['name']);
+            $plato-> setImageTmpName($_FILES['image']['tmp_name']);
+            $plato-> setImageFolder('../../uploaded_img/'.$plato->image) ;
         	$platoResponse = $plato->CreatePlato();
 	        //echo  $userResponse . " response"; //BORRAR
 	        if ($platoResponse == 1) // exitoso
